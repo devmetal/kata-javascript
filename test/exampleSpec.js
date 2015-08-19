@@ -124,5 +124,4 @@ it("test", function() {
 	var valami = {};
 	valami.va = 2;
 	expect(valami.va).toEqual(2);
-
 });
