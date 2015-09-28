@@ -1,5 +1,5 @@
 {
-  "name": "hnreact",
+  "name": "kata-javascript",
   "version": "0.0.1",
   "devDependencies": {
     "babel": "^5.8.21",
@@ -10,6 +10,11 @@
     "gulp": "^3.9.0",
     "gulp-browserify": "^0.5.1",
     "gulp-util": "^3.0.6",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.13.10",
+    "karma-jasmine": "^0.3.6",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "phantomjs": "^1.9.18",
     "react": "^0.13.3",
     "reactfire": "^0.5.0",
     "run-sequence": "^1.1.2",
