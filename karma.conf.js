@@ -15,7 +15,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'frameworks/jquery-2.1.4.js',      
+      'frameworks/jquery-2.1.4.js',
       'src/*.js',
       'src/test/*Spec.js'
     ],
@@ -23,6 +23,7 @@ module.exports = function(config) {
 
     // list of files to exclude
     exclude: [
+        'src/test/exampleSpec.js'
     ],
 
 
