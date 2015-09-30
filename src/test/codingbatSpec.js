@@ -1,16 +1,26 @@
 describe("string2", function(){
-    var doubleChar= function(str){
-        return "";
+    var doubleChar = function(str){
+        var result = "";
+        for(var index = 0;index < str.length;index++)
+            result +=  str.charAt(index)+str.charAt(index);
+        return result;
     };
     it("doubleCharTest", function(){
-        expect(doubleChar("")).toEqual("");
-    /*    expect(doubleChar("a")).toEqual("aa");
-        expect(doubleChar("b")).toEqual("bb");
-        expect(doubleChar("ab")).toEqual("aabb");
-        expect(doubleChar("bb")).toEqual("bbbb");
-        expect(doubleChar("aabb")).toEqual("aaaabbbb");
-        expect(doubleChar("abc")).toEqual("aabbcc");
-    */
-    });
+       expect("").toEqual(doubleChar(""));
+       expect("aa").toEqual(doubleChar("a"));
+       expect("bb").toEqual(doubleChar("b"));
+       expect("aaaa").toEqual(doubleChar("aa"));
 
+        /*
+        1. {}->null, null->constant
+        2. unconditional->if , {}->null, null->constant
+        3. constant->variable, add computing
+        4. if to while
+        */
+
+       expect("bbbb").toEqual(doubleChar("bb"));
+       expect("aabb").toEqual(doubleChar("ab"));
+       expect("aaaabbbb").toEqual(doubleChar("aabb"));
+       expect("aabbcc").toEqual(doubleChar("abc"));
+    });
 });
