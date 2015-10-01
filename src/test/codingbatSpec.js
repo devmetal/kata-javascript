@@ -44,4 +44,30 @@ describe("string2", function(){
         expect(1).toEqual(countHi("ahi"));
         expect(2).toEqual(countHi("hihi"));
     });
+    var catDog = function(str){
+        if(str === undefined || str === "" || str === null)
+            return false;
+
+        var result = false;
+        for(var index = 0;str.length > index;index++)
+            if(str.substring(index,index + 6) === "catdog")
+                result = true;
+        return result;
+    };
+
+     it("catDog", function(){
+        expect(false).toBe(catDog());
+        expect(false).toBe(catDog(undefined));
+        expect(false).toBe(catDog(""));
+        expect(false).toBe(catDog(null));
+
+        expect(false).toBe(catDog("valami"));
+        expect(true).toBe(catDog("catdog"));
+        expect(true).toBe(catDog("catdoga"));
+        expect(true).toBe(catDog("acatdoga"));
+
+
+
+    });
+
 });
