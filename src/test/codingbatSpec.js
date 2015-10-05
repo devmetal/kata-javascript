@@ -45,29 +45,42 @@ describe("string2", function(){
         expect(2).toEqual(countHi("hihi"));
     });
     var catDog = function(str){
-        if(str === undefined || str === "" || str === null)
+        if(str === undefined || str === null)
             return false;
-
-        var result = false;
-        for(var index = 0;str.length > index;index++)
-            if(str.substring(index,index + 6) === "catdog")
-                result = true;
-        return result;
+        if(str.length <= 5)
+            return false;
+        else
+            if(str === "catdog")
+                return true;
+            else if(str == "dogcat")
+                return true;
+            else if(str.substring(0,3) == "cat" && str.substring(4,7) == "dog" )
+                return true;
+            else if(str.substring(0,3) == "dog" && str.substring(4,7) == "cat" )
+                return true;
+            else
+                return false;
     };
 
-     it("catDog", function(){
+    it("catDog", function(){
         expect(false).toBe(catDog());
         expect(false).toBe(catDog(undefined));
-        expect(false).toBe(catDog(""));
         expect(false).toBe(catDog(null));
 
-        expect(false).toBe(catDog("valami"));
+        expect(false).toBe(catDog(""));
+        expect(false).toBe(catDog("catdo"));
         expect(true).toBe(catDog("catdog"));
-        expect(true).toBe(catDog("catdoga"));
-        expect(true).toBe(catDog("acatdoga"));
+        expect(false).toBe(catDog("valami"));
+        expect(true).toBe(catDog("dogcat"));
+        expect(true).toBe(catDog("catxdog"));
+        expect(true).toBe(catDog("dogxcat"));
+//        expect(true).toBe(catDog("catxxxxxdog"));
 
 
-
+//        expect(false).toBe(catDog("valami"));
+//        expect(true).toBe(catDog("catdog"));
+//        expect(true).toBe(catDog("catdoga"));
+//        expect(true).toBe(catDog("acatdoga"));
     });
 
 });
