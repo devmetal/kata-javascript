@@ -1,3 +1,7 @@
+"use strict";
+
+var assert = require('assert');
+
 describe("string2", function(){
     var doubleChar = function(str){
         var result = "";
@@ -82,5 +86,8 @@ describe("string2", function(){
 //        expect(true).toBe(catDog("catdoga"));
 //        expect(true).toBe(catDog("acatdoga"));
     });
+
+
+
 
 });
