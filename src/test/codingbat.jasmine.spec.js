@@ -1,7 +1,5 @@
 "use strict";
 
-var assert = require('assert');
-
 describe("string2", function(){
     var doubleChar = function(str){
         var result = "";
