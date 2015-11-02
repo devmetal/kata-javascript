@@ -4,15 +4,12 @@
 module.exports = function(config) {
   config.set({
     basePath: '',
-    frameworks: ['requirejs','chai','mocha'],
+    frameworks: ['chai','mocha'],
     files: [
-      'src/js/*.js',
-      'src/test/*.spec.js'
+      'src/js/**/*.js',
+      'src/test/**/*.mocha.spec.js'
     ],
     exclude: [
-        'src/js/jasmine.js',
-        'src/test/jasmine.spec.js',
-        'src/test/*.jasmine.spec.js'
     ],
     preprocessors: {
     },
